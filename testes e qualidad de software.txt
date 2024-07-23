@@ -1,0 +1,244 @@
+testes e qualidad de software
+
+matriz de rastreabildade
+
+é ma matriz de linha e coluna
+        f1  f2  f3
+ex: r1  *   *
+    r2  *
+    r3
+
+marca se foi feito a tarefa ou requisito
+
+requisitos 
+
+especificação
+expectativa
+
+escopo do projeto congelado
+
+forma de construção do projeto
+depende de que?
+dependede do escopo do projeto
+
+por que tem outras areas tem maior sucesso na entrega de seus projetos?
+
+por que tem mais experiencia, mais conhecimento, mais pratica, mais habilidade, 
+mais ferramentas, mais recursos, mais tempo, mais dinheiro,
+ mais pessoas, mais treinamento, mais tecnologia, mais suporte, 
+ mais qualidade, mais testes, mais controle, mais planejamento, 
+ mais organização, mais documentação, mais comunicação, mais feedback,
+  mais correção, mais ajuste, mais manutenção, mais evolução, mais inovação,
+   mais satisfação, mais confiança, mais credibilidade, mais reputação, 
+   mais valor, mais vantagem, mais beneficio, mais resultado, mais sucesso
+
+ciclo de vida do software
+é o processo de desenvolvimento do software, inicio, meio e fim
+
+ciclo de vida do software
+    - planejamento
+    - concepção
+    - desenvolvimento
+    - implantação
+    - manutenção
+
+fases definidas
+    - requisitos
+    - projeto
+    - codificação
+    - teste
+    - implantação
+
+Já se constroi antes da concepçãp de projeto estar terminada?
+sim, pois o projeto é uma parte do desenvolvimento do software
+
+o que é um projeto?
+é um conjunto de atividades que tem um objetivo comum
+
+o que é um software?
+é um conjunto de programas de computador
+
+o que é um programa de computador?
+é um conjunto de instruções que são executadas por um computador
+
+o que é um computador?
+é uma maquina que executa instruções
+
+o que depende pra se construir um software?
+
+depende de que?
+conhecimento do negócio a ser modelado
+conhecimento da tecnologia a ser utilizada
+capacidade de abstração do principal interessado
+capacidade de abstração de quem vai construir
+
+volume: bd, ferramentas, recursos, rede, data centers, provedores, pessoas, tempo, dinheiro
+
+Composição
+
+analista de negocios
+analista de sistemas
+analista de infraestrutura
+analista de gereciamento de mudanças
+gerente de projetos
+
+analista de negocios
+    - levantamento de requisitos
+    - especificação de requisitos
+    - validação de requisitos
+    - aceitação de requisitos
+
+analista de sistemas
+    - especificação de requisitos
+    - projeto de sistemas
+    - codificação de sistemas
+    - teste de sistemas
+
+analista de infraestrutura
+    - especificação de requisitos
+    - projeto de infraestrutura
+    - codificação de infraestrutura
+    - teste de infraestrutura
+
+analista de gereciamento de mudanças
+    - especificação de requisitos
+    - projeto de mudanças
+    - codificação de mudanças
+    - teste de mudanças
+
+gerente de projetos
+    - especificação de requisitos
+    - projeto de projetos
+    - codificação de projetos
+    - teste de projetos
+
+Modelo de desenvolvimento de software
+    desenvolvimento queda d'agua
+
+risco
+    - probabilidade
+    - impacto
+
+tempo 
+    - prazo
+    - cronograma
+
+
+requerimentos
+    - requisitos
+    - especificação
+    - expectativa
+
+analise e design
+    - projeto
+    - codificação
+    - teste
+
+implantação
+    - manutenção
+    - evolução
+    - inovação
+
+risco sobe com tempo
+modelo muito usado antigamente
+    - waterfall
+    - cascata
+
+alto risco
+pois nao há possibilidade de mudança
+pois nao há possibilidade de correção
+pois nao há possibilidade de ajuste
+
+questoes do risco no tempo
+
+pressao do risco no tempo
+
+custa mais caro corrigir um erro no final do que no inicio
+
+aumenta riscode cancelamento do projeto
+
+o que se deve fazer ou a mudança ou a sequencia de execução
+
+
+T-form
+
+perpectiva dos processo na empresa
+
+- processo de negocio
+pessoas treinadas 
+
+ao desenhar um processo pra empresa deve-se levar em conta
+se há processos definidos para ter o passo a passo
+se há processos documentados para ter o passo a passo
+se há processos automatizados para ter o passo a passo
+se há processos integrados para ter o passo a passo
+...
+sugestao de melhorias 
+sugestao de inovações
+
+documentar as sugestao
+
+quando o cliente pede uma mudança
+o que se deve fazer?
+
+analisar a mudança
+projetar a mudança
+codificar a mudança
+testar a mudança
+
+e o custo da mudança?
+o custo da mudança deve ser avaliado, e definido se é viavel ou não
+deve-se ser repassado ao cliente o custo da mudança
+caso o cliente aceite o custo da mudança
+pode ser feito a mudança
+
+caso o cliente não aceite o custo da mudança
+não pode ser feito a mudança
+
+deve se documentar e deixar o cliente ciente do custo de mudança
+antes de fazer a mudança
+
+definiçã de produto
+
+pressman(2006)
+    - produto
+    - processo
+    - projeto
+
+qual é o produto do trabalho?
+
+profissional - programas  - conteudo - 
+documentados
+
+usuario - informação 
+
+conceitos de software
+
+1 intruçoes que quando executadas fornencem as caracteristicas, funções e desempenho desejados
+
+2 estrutuea de dados que permite aos programas manipular informações
+
+3 documentos que descrevem a operação e uso dos programas
+
+golive
+
+ao implantar um software deve-se acompanhar o uso do software
+para verificar se o software está sendo utilizado corretamente
+
+comparativo de hardware e software
+
+taxa de falhas de hardware
+taxa de falha infantil
+
+ao longo do tempo a taxa de falha de hardware diminui
+
+mas ao fim ele aumenta as falhas e morre
+
+taxa de falha de software
+
+ao longo do tempo a taxa de falha de software aumenta
+falhas por erro de projeto
+falhas por erro de codificação
+falhas por erro de teste
+
+ao se modificar causas falhas
