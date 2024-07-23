@@ -1,0 +1,193 @@
+﻿Orientações: Uma entrega por equipe (não é necessário que todos os alunos entreguem, apenas um da equipe).
+Cada equipe desempenhará dois papéis. Em um momento será desenvolvedora e em outro testará o software de outra equipe. (O professor sorteará as equipes que inverterão os papéis).  
+
+
+1 – Informe o nome da equipe e o nome dos 4 alunos que farão todos os TDE’s em grupo:
+Cleofas Soares, 
+João Victor Carvalho,
+Luiz Sergio Takahashi,
+Osmar Vieira Borges
+
+
+
+
+2 – Você deverá pensar em uma ideia de software simples para ser desenvolvido. Descreva aqui a ideia do software e pelo menos 5 requisitos.
+Idéia - Agenda de Contatos
+Requisitos
+ R1 - Adicionar Contatos - O sistema deve permitir que o usuário adicione novos contatos com os seguintes campos: Nome, Telefone, E-mail, Endereço e Notas.
+Deve haver validação para garantir que os campos obrigatórios (Nome e Telefone) sejam preenchidos antes de salvar o contato.
+
+
+R 2 - Editar Contatos - O sistema deve permitir que o usuário edite as informações de contatos existentes.
+Ao editar um contato, o sistema deve validar novamente os campos obrigatórios.
+
+
+R3 - Excluir Contatos - O sistema deve permitir que o usuário exclua contatos da lista.
+Antes de excluir um contato, o sistema deve solicitar uma confirmação para evitar exclusões acidentais.
+
+
+ R4 - Visualizar Contatos - O sistema deve exibir uma lista de todos os contatos cadastrados.
+O usuário deve poder clicar em um contato para visualizar detalhes completos, incluindo Nome, Telefone, E-mail, Endereço e Notas.
+
+
+R5 - Busca e Filtragem de Contatos - O sistema deve permitir que o usuário busque contatos por Nome, Telefone ou E-mail.
+Deve haver opções para filtrar contatos por categorias personalizáveis, como "Pessoal" e "Profissional".
+
+
+3 - Como você planejaria a construção de um software?
+
+
+1. Levantamento de Requisitos: Identificação e documentação das necessidades do usuário e do sistema.
+2. Análise de Viabilidade: Avaliação técnica e econômica do projeto.
+3. Planejamento do Projeto: Definição de cronograma, recursos e tarefas.
+4. Desenho da Arquitetura: Criação da estrutura e design do sistema.
+5. Desenvolvimento: Codificação do sistema de acordo com os requisitos.
+6. Testes: Verificação e validação do sistema para garantir que atende aos requisitos.
+7. Implantação: Implementação do sistema no ambiente de produção.
+8. Manutenção: Suporte e atualização contínua do sistema.
+9. Documentação: Criação de documentação técnica e de usuário.
+
+
+4 - Que desafios você acha que seriam os mais difíceis?
+1. Levantamento e Gerenciamento de Requisitos
+2. Gerenciamento de Projetos
+3. Desenvolvimento
+4. Testes
+5. Implantação
+6. Gestão de Riscos
+
+
+
+
+5 - Que fase você considera como a mais complicada?
+
+
+Coleta de Requisitos: É crucial para o sucesso do projeto, pois define as bases para todo o desenvolvimento subsequente.
+
+
+6 - Que estratégias utilizaria para conseguir alcançar os Requisitos (especificações) e Expectativas do cliente?
+1. Reuniões Iniciais e Workshops
+2. Entrevistas e Questionários
+3. Análise de Documentação Existente
+4. Prioritização de Requisitos
+5. Feedback Contínuo e Revisões Regulares
+6. Ferramentas de Gestão de Projetos
+
+
+7 - Por que os custos de desenvolvimento são difíceis de aceitar e prever?
+1. Incerteza nos Requisitos
+2. Complexidade do Projeto
+3. Tecnologia e Ferramentas
+4. Gestão de Riscos
+5. Qualidade e Testes
+6. Escopo de Mudanças
+7. Expectativas do Cliente
+8. Fatores Externos
+8 - Por que não podemos achar todos os erros antes da entrega?
+São vários os fatores que impedem de encontrar todos os erros, dentre eles são:
+        
+1. Mudanças Contínuas
+2. Falhas Humanas
+3. Curto Prazo para Entrega
+4. Falta de Planejamento
+5. Pouca Comunicação entre a Equipe de Desenvolvimento
+
+
+9 - Por que é tão alto o esforço de manutenção dos softwares já existentes?
+1. Complexidade do Sistema
+2. Documentação Inadequada
+3. Evolução de Requisitos
+4. Qualidade do Código
+5. Segurança e Conformidade
+6. Equipe de Manutenção
+7. Testes e Garantia de Qualidade
+8. Integração com Outros Sistemas
+
+
+10 – Escolha um modelo de desenvolvimento de software que poderia auxiliar ou ser mais interessante para a parte de TESTES e justifique sua escolha.
+
+
+Modelo Ágil
+* Integração Contínua e Entrega Contínua (CI/CD): Proporciona feedback rápido e detecção precoce de bugs.
+* Test-Driven Development (TDD): Garante alta cobertura de testes e qualidade do código.
+* Iterações Curtas e Feedback Contínuo: Permite testes e ajustes frequentes.
+* Colaboração e Comunicação: Facilita a comunicação entre desenvolvedores, testadores e stakeholders.
+* Automação de Testes: Incentiva a automação de diversos tipos de testes.
+* Refinamento Contínuo do Backlog: Alinha os testes com os requisitos atualizados.
+* Maior Envolvimento dos Stakeholders: Alinha os testes com as expectativas dos clientes.
+
+
+
+
+
+
+
+
+
+
+
+
+11 – Construa um exemplo de Solicitação de Sistema.
+Solicitante: João da Silva
+Data da Solicitação: 22/07/2024
+Descrição do Sistema: O sistema de Agenda de Contatos é um aplicativo web destinado a armazenar, gerenciar e organizar informações de contatos pessoais e profissionais. O sistema permitirá que os usuários adicionem, editem, excluam e visualizem detalhes de contatos, além de oferecer funcionalidades de busca e filtragem.
+
+
+
+
+12 – Construa um exemplo de Proposta de Sistema.
+Proposta de Sistema: Agenda de Contatos
+Objetivo: Desenvolver um aplicativo web para gerenciamento de contatos pessoais e profissionais, permitindo a adição, edição, exclusão, visualização e busca de contatos de maneira eficiente.
+Escopo do Projeto:
+1. Adição de contatos com validação de campos obrigatórios.
+2. Edição de contatos existentes.
+3. Exclusão de contatos com confirmação.
+4. Visualização de detalhes dos contatos.
+5. Busca e filtragem por nome, telefone ou e-mail.
+Prazo de Execução: 2 meses
+Custo Estimado: R$ 10.000,00
+Equipe de Desenvolvimento:
+* 1 Gerente de Projeto
+* 2 Desenvolvedores
+* 1 Designer
+* 1 Analista de Testes
+
+
+
+
+13 – Construa um exemplo de uma Especificação de Sistema.
+Especificação de Sistema: Agenda de Contatos
+Funcionalidades:
+1. Adicionar Contatos:
+   * Campos: Nome, Telefone, E-mail, Endereço, Notas.
+   * Validação: Nome e Telefone obrigatórios.
+2. Editar Contatos:
+   * Permitir a edição de todos os campos de um contato existente.
+   * Validação dos campos obrigatórios.
+3. Excluir Contatos:
+   * Solicitar confirmação antes de excluir um contato.
+4. Visualizar Contatos:
+   * Lista de contatos com visualização detalhada ao clicar em um contato.
+5. Busca e Filtragem:
+   * Busca por Nome, Telefone ou E-mail.
+   * Filtragem por categorias personalizáveis.
+
+
+14 – Dê exemplos de documentações que poderiam auxiliar a execução dos testes.
+1. Plano de Testes: Descreve a abordagem, recursos e cronograma dos testes.
+2. Casos de Teste: Detalha os cenários específicos a serem testados, incluindo passos e resultados esperados.
+3. Relatórios de Bugs: Documenta os erros encontrados durante os testes e seu status de resolução.
+4. Especificação de Requisitos: Define os requisitos funcionais e não funcionais do sistema, servindo como base para os testes.
+5. Manual do Usuário: Auxilia na execução de testes de usabilidade e verificação da interface do usuário.
+
+
+15 – Pesquise e apresente 3 tipos de testes diferentes. 
+1. Testes de Unidade:
+   * Testa funções individuais do sistema.
+   * Exemplo: Verificar se a função de adicionar contato armazena corretamente os dados.
+2. Testes de Integração:
+   * Verifica a integração entre módulos do sistema.
+   * Exemplo: Testar se a busca de contatos funciona corretamente após adicionar e editar contatos.
+3. Testes de Usabilidade:
+   * Avalia a facilidade de uso da interface do usuário.
+   * Exemplo: Verificar se o usuário consegue adicionar, editar e excluir contatos sem dificuldades.
