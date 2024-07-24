@@ -9,8 +9,6 @@ Luiz Sergio Takahashi,
 Osmar Vieira Borges
 
 
-
-
 2 – Você deverá pensar em uma ideia de software simples para ser desenvolvido. Descreva aqui a ideia do software e pelo menos 5 requisitos.
 Idéia - Agenda de Contatos
 Requisitos
@@ -49,6 +47,7 @@ Deve haver opções para filtrar contatos por categorias personalizáveis, como 
 
 
 4 - Que desafios você acha que seriam os mais difíceis?
+
 1. Levantamento e Gerenciamento de Requisitos
 2. Gerenciamento de Projetos
 3. Desenvolvimento
@@ -57,15 +56,14 @@ Deve haver opções para filtrar contatos por categorias personalizáveis, como 
 6. Gestão de Riscos
 
 
-
-
 5 - Que fase você considera como a mais complicada?
-
 
 Coleta de Requisitos: É crucial para o sucesso do projeto, pois define as bases para todo o desenvolvimento subsequente.
 
 
 6 - Que estratégias utilizaria para conseguir alcançar os Requisitos (especificações) e Expectativas do cliente?
+
+
 1. Reuniões Iniciais e Workshops
 2. Entrevistas e Questionários
 3. Análise de Documentação Existente
@@ -84,8 +82,8 @@ Coleta de Requisitos: É crucial para o sucesso do projeto, pois define as bases
 7. Expectativas do Cliente
 8. Fatores Externos
 8 - Por que não podemos achar todos os erros antes da entrega?
-São vários os fatores que impedem de encontrar todos os erros, dentre eles são:
-        
+
+São vários os fatores que impedem de encontrar todos os erros, dentre eles são:        
 1. Mudanças Contínuas
 2. Falhas Humanas
 3. Curto Prazo para Entrega
@@ -117,25 +115,17 @@ Modelo Ágil
 * Maior Envolvimento dos Stakeholders: Alinha os testes com as expectativas dos clientes.
 
 
-
-
-
-
-
-
-
-
-
-
 11 – Construa um exemplo de Solicitação de Sistema.
 Solicitante: João da Silva
 Data da Solicitação: 22/07/2024
-Descrição do Sistema: O sistema de Agenda de Contatos é um aplicativo web destinado a armazenar, gerenciar e organizar informações de contatos pessoais e profissionais. O sistema permitirá que os usuários adicionem, editem, excluam e visualizem detalhes de contatos, além de oferecer funcionalidades de busca e filtragem.
-
+Descrição do Sistema: O sistema de Agenda de Contatos é um aplicativo web destinado a armazenar,
+ gerenciar e organizar informações de contatos pessoais e profissionais. O sistema permitirá que os usuários adicionem, 
+editem, excluam e visualizem detalhes de contatos, além de oferecer funcionalidades de busca e filtragem.
 
 
 
 12 – Construa um exemplo de Proposta de Sistema.
+
 Proposta de Sistema: Agenda de Contatos
 Objetivo: Desenvolver um aplicativo web para gerenciamento de contatos pessoais e profissionais, permitindo a adição, edição, exclusão, visualização e busca de contatos de maneira eficiente.
 Escopo do Projeto:
@@ -151,8 +141,6 @@ Equipe de Desenvolvimento:
 * 2 Desenvolvedores
 * 1 Designer
 * 1 Analista de Testes
-
-
 
 
 13 – Construa um exemplo de uma Especificação de Sistema.
