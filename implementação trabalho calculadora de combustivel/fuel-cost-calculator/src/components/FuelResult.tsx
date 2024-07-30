@@ -8,13 +8,16 @@ interface FuelResultProps {
 }
 
 const FuelResult: React.FC<FuelResultProps> = ({ distance, consumption, fuelType, fuelPrice }) => {
-  const totalCost = (distance * consumption * fuelPrice).toFixed(2);
+  // Calcular o custo por quilômetro
+  const costPerKm = (fuelPrice / consumption).toFixed(2);
+  // Calcular o custo total
+  const totalCost = (distance * parseFloat(costPerKm)).toFixed(2);
 
   return (
     <div>
       <h2>Resultado</h2>
       <p>
-        Para percorrer {distance} km com um veículo que consome {consumption} litros/km utilizando {fuelType === 'gasoline' ? 'gasolina' : 'álcool'}, o custo será R$ {totalCost}.
+        Para percorrer {distance} km com um veículo que consome {consumption} km/l utilizando {fuelType === 'gasoline' ? 'gasolina' : 'álcool'}, o custo será R$ {totalCost}.
       </p>
     </div>
   );
