@@ -1,6 +1,9 @@
 import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
+/**
+ * Tipos de entrada para o formulário de combustível.
+ */
 interface FuelFormInputs {
   distance: number;
   consumption: number;
@@ -8,10 +11,21 @@ interface FuelFormInputs {
   fuelPrice: number;
 }
 
+/**
+ * Propriedades do componente FuelForm.
+ */
 interface FuelFormProps {
   onSubmit: (data: FuelFormInputs) => void;
 }
 
+/**
+ * Componente FuelForm
+ * 
+ * Formulário para entrada de dados relacionados ao cálculo do custo de combustível.
+ * 
+ * @param {FuelFormProps} props Propriedades do componente.
+ * @returns JSX.Element
+ */
 const FuelForm: React.FC<FuelFormProps> = ({ onSubmit }) => {
   const { register, handleSubmit, formState: { errors } } = useForm<FuelFormInputs>();
 

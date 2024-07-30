@@ -1,5 +1,8 @@
 import React from 'react';
 
+/**
+ * Propriedades do componente FuelResult.
+ */
 interface FuelResultProps {
   distance: number;
   consumption: number;
@@ -7,6 +10,14 @@ interface FuelResultProps {
   fuelPrice: number;
 }
 
+/**
+ * Componente FuelResult
+ * 
+ * Exibe o resultado do cálculo do custo de combustível com base nos dados fornecidos.
+ * 
+ * @param {FuelResultProps} props Propriedades do componente.
+ * @returns JSX.Element
+ */
 const FuelResult: React.FC<FuelResultProps> = ({ distance, consumption, fuelType, fuelPrice }) => {
   // Calcular o custo por quilômetro
   const costPerKm = (fuelPrice / consumption).toFixed(2);
