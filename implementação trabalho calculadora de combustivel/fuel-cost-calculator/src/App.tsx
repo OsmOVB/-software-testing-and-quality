@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import FuelForm from './components/FuelForm';
+import FuelResult from './components/FuelResult';
 
-function App() {
+const App: React.FC = () => {
+  const [formData, setFormData] = useState<null | {
+    distance: number;
+    consumption: number;
+    fuelType: 'gasoline' | 'alcohol';
+    fuelPrice: number;
+  }>(null);
+
+  const handleFormSubmit = (data: {
+    distance: number;
+    consumption: number;
+    fuelType: 'gasoline' | 'alcohol';
+    fuelPrice: number;
+  }) => {
+    setFormData(data);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Calculadora de Gasto de Combustível</h1>
+      <FuelForm onSubmit={handleFormSubmit} />
+      {formData && (
+        <FuelResult
+          distance={formData.distance}
+          consumption={formData.consumption}
+          fuelType={formData.fuelType}
+          fuelPrice={formData.fuelPrice}
+        />
+      )}
     </div>
   );
-}
+};
 
 export default App;
