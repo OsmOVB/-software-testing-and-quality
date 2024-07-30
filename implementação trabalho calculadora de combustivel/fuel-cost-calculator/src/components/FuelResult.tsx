@@ -3,7 +3,7 @@ import React from 'react';
 interface FuelResultProps {
   distance: number;
   consumption: number;
-  fuelType: 'gasoline' | 'alcohol';
+  fuelType: 'gasoline' | 'alcohol' | 'diesel';
   fuelPrice: number;
 }
 
@@ -17,7 +17,7 @@ const FuelResult: React.FC<FuelResultProps> = ({ distance, consumption, fuelType
     <div>
       <h2>Resultado</h2>
       <p>
-        Para percorrer {distance} km com um veículo que consome {consumption} km/l utilizando {fuelType === 'gasoline' ? 'gasolina' : 'álcool'}, o custo será R$ {totalCost}.
+        Para percorrer {distance} km com um veículo que consome {consumption} km/l utilizando {fuelType === 'gasoline' ? 'gasolina' : fuelType === 'alcohol' ? 'álcool' : 'diesel'}, o custo será R$ {totalCost}.
       </p>
     </div>
   );

@@ -4,7 +4,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 interface FuelFormInputs {
   distance: number;
   consumption: number;
-  fuelType: 'gasoline' | 'alcohol';
+  fuelType: 'gasoline' | 'alcohol' | 'diesel';
   fuelPrice: number;
 }
 
@@ -31,7 +31,7 @@ const FuelForm: React.FC<FuelFormProps> = ({ onSubmit }) => {
         {errors.distance && <span>Insira uma distância válida.</span>}
       </div>
       <div>
-        <label>Consumo (litros/km):</label>
+        <label>Consumo (km/l):</label>
         <input
           {...register('consumption', { required: true, min: 0.01 })}
           type="number"
@@ -44,6 +44,7 @@ const FuelForm: React.FC<FuelFormProps> = ({ onSubmit }) => {
         <select {...register('fuelType', { required: true })}>
           <option value="gasoline">Gasolina</option>
           <option value="alcohol">Álcool</option>
+          <option value="diesel">Diesel</option>
         </select>
       </div>
       <div>

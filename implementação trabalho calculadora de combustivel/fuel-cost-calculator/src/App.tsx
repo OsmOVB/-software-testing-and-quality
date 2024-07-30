@@ -6,14 +6,14 @@ const App: React.FC = () => {
   const [formData, setFormData] = useState<null | {
     distance: number;
     consumption: number;
-    fuelType: 'gasoline' | 'alcohol';
+    fuelType: 'gasoline' | 'alcohol' | 'diesel';
     fuelPrice: number;
   }>(null);
 
   const handleFormSubmit = (data: {
     distance: number;
     consumption: number;
-    fuelType: 'gasoline' | 'alcohol';
+    fuelType: 'gasoline' | 'alcohol' | 'diesel';
     fuelPrice: number;
   }) => {
     setFormData(data);
