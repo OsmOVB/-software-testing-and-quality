@@ -15,7 +15,7 @@ interface FuelFormInputs {
  * Propriedades do componente FuelForm.
  */
 interface FuelFormProps {
-  onSubmit: (data: FuelFormInputs) => void;
+  onAdd: (data: FuelFormInputs) => void;
 }
 
 /**
@@ -26,11 +26,11 @@ interface FuelFormProps {
  * @param {FuelFormProps} props Propriedades do componente.
  * @returns JSX.Element
  */
-const FuelForm: React.FC<FuelFormProps> = ({ onSubmit }) => {
+const FuelForm: React.FC<FuelFormProps> = ({ onAdd }) => {
   const { register, handleSubmit, formState: { errors } } = useForm<FuelFormInputs>();
 
   const submitHandler: SubmitHandler<FuelFormInputs> = data => {
-    onSubmit(data);
+    onAdd(data);
   };
 
   return (
@@ -70,7 +70,7 @@ const FuelForm: React.FC<FuelFormProps> = ({ onSubmit }) => {
         />
         {errors.fuelPrice && <span>Insira um preço válido.</span>}
       </div>
-      <button type="submit">Calcular</button>
+      <button type="submit">Adicionar</button>
     </form>
   );
 };
