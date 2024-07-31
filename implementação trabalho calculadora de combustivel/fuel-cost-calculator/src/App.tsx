@@ -50,6 +50,18 @@ const App: React.FC = () => {
     setSelectedData(data);
   };
 
+  /**
+   * Calcula o custo total baseado nos dados fornecidos.
+   * 
+   * @param {FormData} data Dados fornecidos pelo usuário.
+   * @returns {string} Custo total formatado.
+   */
+  const calculateTotalCost = (data: FormData): string => {
+    const costPerKm = data.fuelPrice / data.consumption;
+    const totalCost = data.distance * costPerKm;
+    return totalCost.toFixed(2);
+  };
+
   return (
     <div>
       <h1>Calculadora de Gasto de Combustível</h1>
@@ -58,7 +70,7 @@ const App: React.FC = () => {
       <ul>
         {formDataList.map((data, index) => (
           <li key={index} onClick={() => handleSelectData(data)}>
-            {data.distance} km, {data.consumption} km/l, {data.fuelType}, R$ {data.fuelPrice}/litro
+            {data.distance} km, {data.consumption} km/l, {data.fuelType}, R$ {data.fuelPrice}/litro - Custo: R$ {calculateTotalCost(data)}
           </li>
         ))}
       </ul>
