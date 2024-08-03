@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FuelForm from './components/FuelForm';
 import FuelResult from './components/FuelResult';
-// import { saveDataToFile } from './utils/dataUtils';
+import { saveDataToMockDatabase, getDataFromMockDatabase } from './database/mockDatabase';
 
 /**
  * Tipos de dados do formulário.
@@ -22,6 +22,12 @@ const App: React.FC = () => {
   const [formDataList, setFormDataList] = useState<FormData[]>([]);
   const [selectedData, setSelectedData] = useState<FormData | null>(null);
 
+  // Carrega os dados iniciais do mockDatabase
+  useEffect(() => {
+    const initialData = getDataFromMockDatabase();
+    setFormDataList(initialData);
+  }, []);
+
   /**
    * Manipulador para adicionar dados à lista.
    * 
@@ -30,7 +36,7 @@ const App: React.FC = () => {
   const handleFormAdd = (data: FormData) => {
     setFormDataList(prevList => {
       const updatedList = [...prevList, data];
-      // saveDataToFile(updatedList);
+      saveDataToMockDatabase(updatedList);
       return updatedList;
     });
   };
@@ -44,6 +50,18 @@ const App: React.FC = () => {
     setSelectedData(data);
   };
 
+  /**
+   * Calcula o custo total baseado nos dados fornecidos.
+   * 
+   * @param {FormData} data Dados fornecidos pelo usuário.
+   * @returns {string} Custo total formatado.
+   */
+  const calculateTotalCost = (data: FormData): string => {
+    const costPerKm = data.fuelPrice / data.consumption;
+    const totalCost = data.distance * costPerKm;
+    return totalCost.toFixed(2);
+  };
+
   return (
     <div>
       <h1>Calculadora de Gasto de Combustível</h1>
@@ -52,7 +70,7 @@ const App: React.FC = () => {
       <ul>
         {formDataList.map((data, index) => (
           <li key={index} onClick={() => handleSelectData(data)}>
-            {data.distance} km, {data.consumption} km/l, {data.fuelType}, R$ {data.fuelPrice}/litro
+            {data.distance} km, {data.consumption} km/l, {data.fuelType}, R$ {data.fuelPrice}/litro - Custo: R$ {calculateTotalCost(data)}
           </li>
         ))}
       </ul>
