@@ -31,16 +31,22 @@ interface FuelFormProps {
  */
 const FuelForm: React.FC<FuelFormProps> = ({ onAdd, initialFuelType = 'gasoline', initialDistance = 0, disabled = false }) => {
   const [fuelType, setFuelType] = useState<'gasoline' | 'alcohol'>(initialFuelType);
-  const { register, handleSubmit, formState: { errors }, reset } = useForm<FuelFormInputs>({
+  const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm<FuelFormInputs>({
     defaultValues: {
       distance: initialDistance,
-      fuelType: initialFuelType
+      fuelType: initialFuelType,
+      consumption: 0,
+      fuelPrice: 0
     }
   });
 
   useEffect(() => {
     setFuelType(initialFuelType);
-  }, [initialFuelType]);
+    setValue('fuelType', initialFuelType);
+    setValue('distance', initialDistance);
+    setValue('consumption', 0);
+    setValue('fuelPrice', 0);
+  }, [initialFuelType, initialDistance, setValue]);
 
   const submitHandler: SubmitHandler<FuelFormInputs> = data => {
     onAdd(data);
@@ -48,10 +54,17 @@ const FuelForm: React.FC<FuelFormProps> = ({ onAdd, initialFuelType = 'gasoline'
       setFuelType('alcohol');
       reset({
         distance: data.distance,
-        fuelType: 'alcohol'
+        fuelType: 'alcohol',
+        consumption: 0,
+        fuelPrice: 0
       });
     } else {
-      reset();
+      reset({
+        distance: initialDistance,
+        fuelType: 'gasoline',
+        consumption: 0,
+        fuelPrice: 0
+      });
     }
   };
 
@@ -62,9 +75,8 @@ const FuelForm: React.FC<FuelFormProps> = ({ onAdd, initialFuelType = 'gasoline'
         <input
           {...register('distance', { required: "Insira uma distância válida.", min: { value: 0.1, message: "A distância deve ser maior que 0." } })}
           type="number"
-         // step="any"
-          disabled={fuelType === 'alcohol'} // Permite a entrada de distância para novo cálculo
-          
+          step="any"
+          disabled={fuelType === 'alcohol' && !disabled} // Permite a entrada de distância para novo cálculo
         />
         {errors.distance && <span>{errors.distance.message}</span>}
       </div>

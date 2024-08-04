@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import FuelForm from './components/FuelForm';
 import { saveDataToMockDatabase, getDataFromMockDatabase, FormData } from './database/mockDatabase';
+import './App.css'; // Importando o arquivo CSS
 
 /**
  * Componente principal da aplicação.
@@ -11,6 +12,8 @@ const App: React.FC = () => {
   const [formDataList, setFormDataList] = useState<FormData[]>([]);
   const [selectedData, setSelectedData] = useState<FormData[]>([]);
   const [isFormDisabled, setIsFormDisabled] = useState<boolean>(false);
+  const [initialFuelType, setInitialFuelType] = useState<'gasoline' | 'alcohol'>('gasoline');
+  const [initialDistance, setInitialDistance] = useState<number>(0);
 
   // Carrega os dados iniciais do mockDatabase
   useEffect(() => {
@@ -35,6 +38,8 @@ const App: React.FC = () => {
       setIsFormDisabled(true);
     } else {
       setSelectedData([data]);
+      setInitialFuelType('alcohol');
+      setInitialDistance(data.distance);
     }
   };
 
@@ -46,6 +51,8 @@ const App: React.FC = () => {
     setFormDataList([]);
     setIsFormDisabled(false);
     saveDataToMockDatabase([]); // Limpa os dados armazenados no mockDatabase
+    setInitialFuelType('gasoline');
+    setInitialDistance(0);
   };
 
   /**
@@ -79,12 +86,12 @@ const App: React.FC = () => {
     const worstCost = bestFuel === 'Álcool' ? gasolineCost : alcoholCost;
 
     return (
-      <div style={{ display: 'flex', gap: '10px', marginTop: '20px' }}>
-        <div style={{ backgroundColor: '#4caf50', padding: '20px', borderRadius: '5px', width: '250px', height: '250px' }}>
+      <div className="results">
+        <div className={`card best`}>
           <h3>{bestFuel} é mais vantajoso!</h3>
           <p>Custo: R$ {bestCost}</p>
         </div>
-        <div style={{ backgroundColor: '#f44336', padding: '20px', borderRadius: '5px', width: '250px' }}>
+        <div className={`card worst`}>
           <h3>{worstFuel}</h3>
           <p>Custo: R$ {worstCost}</p>
         </div>
@@ -95,18 +102,27 @@ const App: React.FC = () => {
   return (
     <div>
       <h1>Calculadora de Gasto de Combustível</h1>
-      <FuelForm onAdd={handleFormAdd} initialFuelType="gasoline" disabled={isFormDisabled} />
-      <h2>Lista de Dados Adicionados</h2>
-      <ul>
-        {formDataList.map((data, index) => (
-          <li key={index}>
-            {data.distance} km, {data.consumption} km/l, {data.fuelType}, R$ {data.fuelPrice}/litro - Custo: R$ {calculateTotalCost(data)}
-          </li>
-        ))}
-      </ul>
-      {compareFuelCosts()}
+      <FuelForm
+        onAdd={handleFormAdd}
+        initialFuelType={initialFuelType}
+        initialDistance={initialDistance}
+        disabled={isFormDisabled}
+      />
+      {formDataList.length > 1 && (
+        <>
+          <h2>Lista de Dados Adicionados</h2>
+          <ul>
+            {formDataList.map((data, index) => (
+              <li key={index}>
+                {data.distance} km, {data.consumption} km/l, {data.fuelType}, R$ {data.fuelPrice}/litro - Custo: R$ {calculateTotalCost(data)}
+              </li>
+            ))}
+          </ul>
+          {compareFuelCosts()}
+        </>
+      )}
       {isFormDisabled && (
-        <button onClick={handleReset} style={{ marginTop: '20px' }}>
+        <button onClick={handleReset} className="reset">
           Novo Cálculo
         </button>
       )}
